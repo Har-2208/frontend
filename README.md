@@ -120,19 +120,3 @@ REACT_APP_ENV=development
 - JavaScript must be enabled in the browser
 - Requires modern browser for optimal performance
 
-##  License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-##  Support
-
-For support, email support@studentportal.com or open an issue in the repository.
-
-##  Acknowledgments
-
-- React team for the amazing framework
-- All contributors who have helped this project grow
-
----
-
-Made with ❤️ by the Student-Admin Portal Team
