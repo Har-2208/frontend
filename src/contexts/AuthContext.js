@@ -24,21 +24,39 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (credentials) => {
-    // TODO: Replace with actual API call to your backend
-    // const response = await fetch('/api/auth/login', {
+    // TODO: Replace with actual backend API call
+    // const response = await fetch('YOUR_BACKEND_URL/api/auth/login', {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(credentials)
+    //   body: JSON.stringify({ email: credentials.email, password: credentials.password })
     // });
     // const data = await response.json();
+    // 
+    // Backend response should include:
+    // {
+    //   id: "user_id",
+    //   name: "User Name",
+    //   email: "user@example.com",
+    //   isAdmin: true/false,  // This determines student vs admin
+    //   profileComplete: true/false
+    // }
+    //
+    // const user = {
+    //   ...data,
+    //   role: data.isAdmin ? 'admin' : 'student'
+    // };
+    // setUser(user);
+    // localStorage.setItem('user', JSON.stringify(user));
+    // return user;
     
-    // Mock implementation - Backend should return user data with isAdmin boolean
+    // TEMPORARY MOCK - Remove when connecting to real backend
+    // Simulating backend response
     const mockUser = {
       id: '1',
       name: credentials.email.split('@')[0],
       email: credentials.email,
-      isAdmin: credentials.email.includes('admin'), // Backend will determine this
-      role: credentials.email.includes('admin') ? 'admin' : 'student', // Derived from isAdmin
+      isAdmin: false, // Backend will return actual value from database
+      role: 'student', // Will be 'admin' if isAdmin is true
       profileComplete: false,
     };
     
