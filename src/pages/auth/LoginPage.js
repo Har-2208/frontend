@@ -8,7 +8,6 @@ const LoginPage = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    role: 'student',
   });
 
   const handleSubmit = async (e) => {
@@ -57,20 +56,6 @@ const LoginPage = () => {
                 className="input-field"
                 placeholder="••••••••"
               />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Login as
-              </label>
-              <select
-                value={formData.role}
-                onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                className="input-field"
-              >
-                <option value="student">Student</option>
-                <option value="admin">Admin</option>
-              </select>
             </div>
 
             <button type="submit" className="w-full btn-primary">

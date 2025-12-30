@@ -24,13 +24,21 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (credentials) => {
-    // OAuth login logic will go here
-    // For now, mock implementation
+    // TODO: Replace with actual API call to your backend
+    // const response = await fetch('/api/auth/login', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(credentials)
+    // });
+    // const data = await response.json();
+    
+    // Mock implementation - Backend should return user data with isAdmin boolean
     const mockUser = {
       id: '1',
       name: credentials.email.split('@')[0],
       email: credentials.email,
-      role: credentials.role || 'student', // 'student' or 'admin'
+      isAdmin: credentials.email.includes('admin'), // Backend will determine this
+      role: credentials.email.includes('admin') ? 'admin' : 'student', // Derived from isAdmin
       profileComplete: false,
     };
     
@@ -40,12 +48,22 @@ export const AuthProvider = ({ children }) => {
   };
 
   const signup = async (userData) => {
-    // OAuth signup logic will go here
+    // TODO: Replace with actual API call to your backend
+    // const response = await fetch('/api/auth/signup', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(userData)
+    // });
+    // const data = await response.json();
+    
+    // Mock implementation - By default, new signups are students
+    // Admin accounts should be created through a separate admin panel or backend process
     const mockUser = {
       id: Date.now().toString(),
       name: userData.name,
       email: userData.email,
-      role: userData.role || 'student',
+      isAdmin: false, // New signups are students by default
+      role: 'student', // Derived from isAdmin
       profileComplete: false,
     };
     
