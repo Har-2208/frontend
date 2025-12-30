@@ -10,7 +10,6 @@ const SignupPage = () => {
     email: '',
     password: '',
     confirmPassword: '',
-    role: 'student',
   });
 
   const handleSubmit = async (e) => {
@@ -91,20 +90,6 @@ const SignupPage = () => {
                 className="input-field"
                 placeholder="••••••••"
               />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                I am a
-              </label>
-              <select
-                value={formData.role}
-                onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                className="input-field"
-              >
-                <option value="student">Student</option>
-                <option value="admin">Admin</option>
-              </select>
             </div>
 
             <button type="submit" className="w-full btn-primary">
