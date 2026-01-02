@@ -51,12 +51,15 @@ export const AuthProvider = ({ children }) => {
     
     // TEMPORARY MOCK - Remove when connecting to real backend
     // Simulating backend response
+    // TEMPORARY: Admin access for testing
+    const isAdminUser = credentials.email === 'sheetal.kulkarni@mitwpu.edu.in';
+    
     const mockUser = {
       id: '1',
       name: credentials.email.split('@')[0],
       email: credentials.email,
-      isAdmin: false, // Backend will return actual value from database
-      role: 'student', // Will be 'admin' if isAdmin is true
+      isAdmin: isAdminUser, // Backend will return actual value from database
+      role: isAdminUser ? 'admin' : 'student',
       profileComplete: false,
     };
     
