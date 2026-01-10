@@ -1,10 +1,10 @@
 # Student-Admin Portal - Frontend
 
-A web application that connects students with opportunities through an intuitive student-admin portal interface.
+A web application that connects students with opportunities through an intuitive student-admin portal interface
 
 ##  Description
 
-The Student-Admin Portal is a frontend application designed to facilitate communication and opportunity management between students and administrators. This platform provides a seamless interface for managing student profiles, opportunities, and administrative tasks.
+The Student-Admin Portal is a frontend application designed to facilitate communication and opportunity management between students and administrators. This platform provides a seamless interface for managing student profiles, opportunities, and administrative tasks
 
 ##  Features
 
