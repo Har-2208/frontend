@@ -1,4 +1,5 @@
-# Student - Admin Portal - Frontend
+# Student - Admin Portal - frontend
+
 
 A web application that connects students with opportunities through an intuitive student-admin portal interface
 
